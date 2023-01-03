@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
-#include "input.h"
+#include "InputHandler.h"
+#include "Calculator.h"
 
 using namespace std;
 using namespace input;
@@ -11,10 +12,14 @@ int main() {
     string name = getString();
 
     while (true){
+
+        // Only way to assign Abstract class implementation is by using pointer
+        // Goal was to assign implementation class to interface variable
+        CalculatorInterface* calculatorInterface = new WendlerCalculator();
+
         if (name == "max") {
             cout << "You chose Max!" << endl;
-            int test = getInteger();
-            cout << test << endl;
+            cout << calculatorInterface->CalculateOneRepMax(5, 100) << endl;
             cout << "You selected max" << endl;
             break;
         } else if (name == "reps") {

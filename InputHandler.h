@@ -2,8 +2,8 @@
 // Created by Kristian Hanus on 03.01.2023.
 //
 
-#ifndef C_EXERCISE_CALCULATOR_INPUT_H
-#define C_EXERCISE_CALCULATOR_INPUT_H
+#ifndef C_EXERCISE_CALCULATOR_INPUTHANDLER_H
+#define C_EXERCISE_CALCULATOR_INPUTHANDLER_H
 
 #include <iostream>
 #include <string>
@@ -61,4 +61,4 @@ namespace input {
     }
 }
 
-#endif //C_EXERCISE_CALCULATOR_INPUT_H
+#endif //C_EXERCISE_CALCULATOR_INPUTHANDLER_H
