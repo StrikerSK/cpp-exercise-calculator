@@ -1,46 +1,33 @@
 #include <iostream>
 #include <string>
+#include "input.h"
 
 using namespace std;
-
-string getString();
-float getFloat();
-uint getInteger();
+using namespace input;
 
 int main() {
     cout << "Hello user! I can calculate for you 1-RM, N-RM and Weight of your exercise!" << endl;
     cout << "Which one would you like to calculate (Max, Reps, Weight)?" << endl;
-    string name  = getString();
+    string name = getString();
 
-    switch (name) {
-        case "max":
+    while (true){
+        if (name == "max") {
+            cout << "You chose Max!" << endl;
+            int test = getInteger();
+            cout << test << endl;
             cout << "You selected max" << endl;
-        case "reps":
+            break;
+        } else if (name == "reps") {
             cout << "You selected reps" << endl;
-        case "weight":
+            break;
+        } else if (name == "weight") {
             cout << "You selected weight" << endl;
-        default:
+            break;
+        } else {
             cout << "Sorry, I don't know this calculation type! Do you want to calculate: Max, Reps or Weight!" << endl;
+            cin >> name;
+        }
     }
 
-    cout << "You entered: " << name << endl;
     return 0;
-}
-
- string getString() {
-    string input;
-    cin >> input;
-    return input;
-}
-
-float getFloat() {
-    float input;
-    cin >> input;
-    return input;
-}
-
-uint getInteger() {
-    uint input;
-    cin >> input;
-    return input;
 }
