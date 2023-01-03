@@ -2,6 +2,7 @@
 #include <string>
 #include "InputHandler.h"
 #include "Calculator.h"
+#include "CalculatorRunner.h"
 
 using namespace std;
 using namespace input;
@@ -17,16 +18,15 @@ int main() {
         // Goal was to assign implementation class to interface variable
         CalculatorInterface* calculatorInterface = new WendlerCalculator();
 
+        // To compare string we cannot use switch
         if (name == "max") {
-            cout << "You chose Max!" << endl;
-            cout << calculatorInterface->CalculateOneRepMax(5, 100) << endl;
-            cout << "You selected max" << endl;
+            runner::CalculateExerciseMax(*calculatorInterface);
             break;
         } else if (name == "reps") {
-            cout << "You selected reps" << endl;
+            runner::CalculateExerciseSet(*calculatorInterface);
             break;
         } else if (name == "weight") {
-            cout << "You selected weight" << endl;
+            runner::CalculateExerciseWeight(*calculatorInterface);
             break;
         } else {
             cout << "Sorry, I don't know this calculation type! Do you want to calculate: Max, Reps or Weight!" << endl;

@@ -3,4 +3,4 @@ project(c_exercise_calculator)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(c_exercise_calculator main.cpp InputHandler.h Calculator.h)
+add_executable(c_exercise_calculator main.cpp InputHandler.h Calculator.h CalculatorRunner.h)
